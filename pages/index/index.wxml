@@ -1,13 +1,29 @@
+<include src="../include/header.wxml"/>
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+	<view class="userinfo">
+		<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+		<block wx:else>
+			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+			<button bindtap="bindViewDemo"> 进入练习 </button>
+		</block>
+	</view>
+	<view class="usermotto">
+		<text class="user-motto">{{motto}}</text>
+	</view>
+	<view wx:if="{{timeFlag}}" class="usermotto">
+		<text class="user-motto">当前系统时间：{{time}}</text>
+	</view>
+	<view> {{a + b}} + {{c}} + d </view>
+	<view> {{"Hello " + "Kaishen"}} </view>
+	<view> {{"a: " + a + ", b: " + b + " c: " +c}}</view>
+	<view wx:if="{{a+b > 1}}"> a+b >1 </view>
+	<view wx:elif="{{a+b > 2}}"> a+b >2 </view>
+	<view wx:else> a+b >3 </view>
+
+	<view wx:for="{{array}}" wx:for-index="index" wx:for-item="item">
+		{{index}}: {{item.message}}
+	</view>
 </view>
+<include src="../include/footer.wxml"/>

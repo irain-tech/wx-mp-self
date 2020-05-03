@@ -1,0 +1,16 @@
+/* pages/demo/demo.wxss */
+.demo-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.demo-item {
+  margin: 10rpx;
+}
+
+.odd-text {
+  color: #aef;
+}
+.even-text {
+  color: #fea;
+}
