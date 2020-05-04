@@ -24,3 +24,93 @@ view.ele{
   /* 权重为 1 + 10 = 11 */
   color: green
 }
+
+.container{
+  padding-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  width: 400px;
+  height: 200px;
+  background-color: #abc;
+}
+.item1 {
+  order: 0;
+  padding: 10rpx;
+  color: blue;
+  width: 120px;
+  flex-basis:50px;
+  background-color: gray;
+  flex-shrink: 2;
+  flex-grow: 3;
+}
+.item2 {
+  order: 1;
+  padding: 10rpx;
+  color: red;
+  background-color: green;
+  width: 150px;
+  flex-shrink: 3;
+  flex-grow: 2;
+}
+.item3 {
+  order: 2;
+  padding: 10rpx;
+  color: yellow;
+  background-color: brown;
+  width: 180px;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+.item4 {
+  order: 2;
+  padding: 10rpx;
+  color: purple;
+  background-color:yellowgreen;
+  width: 150px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  align-self: flex-end;
+}
+
+.hover{
+  background-color: gray;
+}
+
+.btn {
+  order: 5;
+  padding: 10rpx;
+  color:#0000ee;
+  background-color:rgb(59, 90, 2);
+  width: 150px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  align-self: flex-end;
+}
+
+.btn1 {
+  order: 5;
+  padding: 10rpx;
+  color:#0000ee;
+  background-color:rgb(163, 180, 6);
+  width: 150px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  align-self: flex-end;
+}
+
+.container2 {
+  padding-bottom: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  width: 400px;
+  height: 200px;
+  background-color: rgb(89, 202, 236);
+}

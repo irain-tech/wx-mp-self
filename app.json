@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/demo-css/demo-css",
     "pages/index/index",
     "pages/logs/logs",
     "pages/demo/demo",
-    "pages/demo-css/demo-css",
     "pages/cat/cat"
   ],
   "window": {

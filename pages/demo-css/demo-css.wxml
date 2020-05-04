@@ -6,4 +6,14 @@
 	<text id="ele">ELEMENT </text>
 </view>
 
-<image mode="aspectFit" src="../../resources/love/1.jpeg"></image>
+<view class="container">
+	<view class="item1">项目1 content 1</view>
+	<view class="item2">项目2 content 2</view>
+	<view class="item3">项目3 content 3</view>
+	<view class="item4" hover-class="hover">项目4 content 4</view>
+</view>
+
+<view class="container2">
+	<button class="btn" hover-class="hover" bindtap="bindTapSubmit" loading="{{loading}}">提交保存</button>
+	<button class="btn1" hover-class="hover" bindtap="bindTapShowMsg">显示消息</button>
+</view>	

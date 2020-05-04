@@ -89,7 +89,7 @@ Page({
     console.log(options);
     console.log('onload event')
     // 打印系统信息
-    this.printSysInfo();
+    // this.printSysInfo();
     // 检查蓝牙功能是否支持
     this.wxApiVersionCheck();
 
