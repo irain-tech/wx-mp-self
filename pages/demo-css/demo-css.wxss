@@ -1,0 +1,26 @@
+/* pages/demo-css/demo-css.wxss */
+
+view{ 
+  /* 权重为 1 */
+  color: blue
+}
+
+.ele{  
+  /* 权重为 10 */
+  color: red
+}
+
+#ele{ 
+  /* 权重为 100 */
+  color: pink
+}
+
+view#ele{ 
+  /* 权重为 1 + 100 = 101，优先级最高，元素颜色为orange */
+  color: orange
+}
+
+view.ele{ 
+  /* 权重为 1 + 10 = 11 */
+  color: green
+}

@@ -34,13 +34,65 @@ Page({
   bindViewDemo: function () {
     console.log('bindViewDemo event')
     wx.navigateTo({
-      url: '../demo/demo'
+      url: '../demo/demo?key=value'
+    })
+  },
+  //跳转至练习界面
+  bindViewDemoCss: function () {
+    console.log('bindViewDemoCss event')
+    wx.navigateTo({
+      url: '../demo-css/demo-css'
     })
   },
 
-  onLoad: function () {
+  printSysInfo: function () {
+    console.log("=====System info ======");
+    console.log(wx.getSystemInfoSync());
+    wx.showModal({
+      title: '当前系统信息',
+      content: JSON.stringify(wx.getSystemInfoSync())
+    })
+  },
 
+  checkBlueTooth: function () {
+    if (wx.openBluetoothAdapter) {
+      wx.openBluetoothAdapter()
+    } else {
+      // 如果希望用户在最新版本的客户端上体验您的小程序，可以这样子提示
+      wx.showModal({
+        title: '提示',
+        content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
+      })
+    }
+  },
+
+  wxApiVersionCheck: function () {
+    console.log(wx.canIUse('openBluetoothAdapter'));
+    console.log(wx.canIUse('openBluetoothAdapter'));
+    console.log(wx.canIUse('openBluetoothAdapter'));
+
+    // // 判断接口及其参数在宿主环境是否可用
+    // wx.canIUse('openBluetoothAdapter')
+    // wx.canIUse('getSystemInfoSync.return.screenWidth')
+    // wx.canIUse('getSystemInfo.success.screenWidth')
+    // wx.canIUse('showToast.object.image')
+    // wx.canIUse('onCompassChange.callback.direction')
+    // wx.canIUse('request.object.method.GET')
+
+    // // 判断组件及其属性在宿主环境是否可用
+    // wx.canIUse('contact-button')
+    // wx.canIUse('text.selectable')
+    // wx.canIUse('button.open-type.contact')
+  },
+
+  onLoad: function (options) {
+    console.log(options);
     console.log('onload event')
+    // 打印系统信息
+    this.printSysInfo();
+    // 检查蓝牙功能是否支持
+    this.wxApiVersionCheck();
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

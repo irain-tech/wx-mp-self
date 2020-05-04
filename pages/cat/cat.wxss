@@ -1,0 +1,4 @@
+/* pages/cat/cat.wxss */
+.section__ctn{
+  text-align: center;
+}

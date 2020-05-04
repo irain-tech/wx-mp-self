@@ -1,0 +1,9 @@
+<!--内联样式-->
+<view style="color: {{bgColor}}; font-size: 48rpx; align: center">DEMO CSS</view>
+
+<!-- 外联样式-->
+<view class="ele">
+	<text id="ele">ELEMENT </text>
+</view>
+
+<image mode="aspectFit" src="../../resources/love/1.jpeg"></image>

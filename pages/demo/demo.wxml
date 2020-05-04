@@ -5,6 +5,9 @@
 	<button bindtap="addToFront"> Add to the front </button>
 	<switch wx:for="{{numberArray}}" wx:key="*this"> {{item}} </switch>
 	<button bindtap="addNumberToFront"> Add Number to the front </button>
+
+  <!-- 转到 demo-css 界面-->
+	<button bindtap="navigate"> 打开 Demo CSS </button>
   
   
   <!-- 定义模板 -->
@@ -15,7 +18,7 @@
     <view class="even-text"> even </view>
   </template>
   <!-- 使用模板 -->
-  <block wx:for="{{[1,2,3,4]}}">
+  <block wx:for="{{[1,2,3,4]}}" wx:key="unique">
     <template is="{{item %2 == 0 ? 'odd' : 'even'}}"></template>
   </block>
 

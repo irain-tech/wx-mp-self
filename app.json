@@ -1,14 +1,38 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/demo/demo"
+    "pages/demo/demo",
+    "pages/demo-css/demo-css",
+    "pages/cat/cat"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "小微助力，助力小微",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 0
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "Home",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "Logs",
+        "pagePath": "pages/logs/logs"
+      },
+      {
+        "text": "Demo",
+        "pagePath": "pages/demo/demo"
+      },
+      {
+        "text": "Cat",
+        "pagePath": "pages/cat/cat"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
