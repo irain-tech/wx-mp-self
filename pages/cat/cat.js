@@ -42,7 +42,7 @@ Page({
       mode: 'bottom right',
       text: 'bottom right：不缩放图片，只显示图片的右下边区域'
     }],
-    src: '../../resources/cat.jpgx'
+    src: '../../resources/cat.jpg'
   },
 
   imageError: function (e) {
