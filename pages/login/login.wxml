@@ -1,0 +1,35 @@
+<include src="../include/header.wxml" />
+<!--index.wxml-->
+<view class="container">
+	<view class="userinfo">
+		<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"> 获取头像昵称 </button>
+		<block wx:else>
+			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+			<view>
+				<text class="userinfo-nickname">{{"session key: " + sessionKey}}</text>
+			</view>
+			<view>
+				<text class="userinfo-nickname">{{"openId: " + openId}}</text>
+			</view>
+			<view>	
+				<text class="userinfo-nickname">{{"nickName: " + userInfo.nickName}}</text>
+			</view>
+			<view>
+				<text class="userinfo-nickname">{{"city: " + userInfo.city}}</text>
+			</view>
+			<view>
+				<text class="userinfo-nickname">{{"province: " + userInfo.province}}</text>
+			</view>
+			<view>
+				<text class="userinfo-nickname">{{"country: " + userInfo.country}}</text>
+			</view>
+			<view>
+				<text class="userinfo-nickname">gender: {{ userInfo.gender == 1 ? "male" : "female"}}</text>
+			</view>
+			<view>
+				<text class="userinfo-nickname">{{"language: " + userInfo.language}}</text>
+			</view>
+		</block>
+	</view>
+</view>
+<include src="../include/footer.wxml" />
