@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/demo-css/demo-css",
     "pages/index/index",
     "pages/logs/logs",
     "pages/demo/demo",
+    "pages/demo-css/demo-css",
     "pages/cat/cat"
   ],
   "window": {
@@ -33,6 +33,9 @@
         "pagePath": "pages/cat/cat"
       }
     ]
+  },
+  "networkTimeout": {
+    "request": 3000
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

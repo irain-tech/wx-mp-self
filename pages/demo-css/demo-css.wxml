@@ -1,9 +1,37 @@
 <!--内联样式-->
-<view style="color: {{bgColor}}; font-size: 48rpx; align: center">DEMO CSS</view>
+<!-- <view style="color: {{bgColor}}; font-size: 48rpx; align: center">DEMO CSS</view> -->
 
 <!-- 外联样式-->
-<view class="ele">
+<!-- <view class="ele">
 	<text id="ele">ELEMENT </text>
+</view> -->
+
+<!-- 表单-->
+<view class="page-body">
+  <view class="page-section">
+    <view class="weui-cells__title">APP Name</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" auto-focus placeholder="将会获取焦点" value="{{appInfo.appName}}"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">Version</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" maxlength="10" placeholder="最大输入长度为10" value="{{appInfo.version}}"/>
+      </view>
+    </view>
+  </view>
+  <view class="page-section">
+    <view class="weui-cells__title">Author</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" maxlength="10" placeholder="最大输入长度为10" value="{{appInfo.author}}"/>
+      </view>
+    </view>
+  </view>
 </view>
 
 <view class="container">

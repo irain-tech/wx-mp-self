@@ -7,6 +7,9 @@ Page({
   data: {
     "bgColor": "blue",
     "loading": false,
+    "appName":"demo",
+    "version":"demo",
+    "author":"demo",
   },
 
   /**
@@ -23,6 +26,18 @@ Page({
     //     console.log("element " + element)
     //   }
     // }
+
+    var that = this;
+    wx.request({
+      url: 'http://mydomain.com:7070/status',
+      success: function(res) {
+        console.log(res)// 服务器回包信息
+        that.setData({
+          appInfo: res.data
+        });
+        console.log(that.data)
+      }
+    })
   },
 
   /**
